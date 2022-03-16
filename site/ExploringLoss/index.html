@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="http://prg.engineer/contacto/">
+        <link rel="canonical" href="http://prg.engineer/ExploringLoss/">
       
       <link rel="icon" href="../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
     
     
       
-        <title>Contacto - PRG</title>
+        <title>ExploringLoss - PRG</title>
       
     
     
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Contacto
+              ExploringLoss
             
           </span>
         </div>
@@ -198,10 +198,12 @@
         
   
   
+    
+  
 
 
   <li class="md-tabs__item">
-    <a href="../ExploringLoss/" class="md-tabs__link">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
       ExploringLoss
     </a>
   </li>
@@ -234,12 +236,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="./" class="md-tabs__link md-tabs__link--active">
+    <a href="../contacto/" class="md-tabs__link">
       Contacto
     </a>
   </li>
@@ -303,11 +303,19 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../ExploringLoss/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         ExploringLoss
       </a>
+      
     </li>
   
 
@@ -348,19 +356,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../contacto/" class="md-nav__link">
         Contacto
       </a>
-      
     </li>
   
 
@@ -379,9 +379,96 @@
                 
 
 
-  <h1>Contacto</h1>
+  <h1>ExploringLoss</h1>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script>
+(function() {
+  function addWidgetsRenderer() {
+    var requireJsScript = document.createElement('script');
+    requireJsScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js';
+
+    var mimeElement = document.querySelector('script[type="application/vnd.jupyter.widget-view+json"]');
+    var jupyterWidgetsScript = document.createElement('script');
+    var widgetRendererSrc = 'https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js';
+    var widgetState;
+
+    // Fallback for older version:
+    try {
+      widgetState = mimeElement && JSON.parse(mimeElement.innerHTML);
+
+      if (widgetState && (widgetState.version_major < 2 || !widgetState.version_major)) {
+        widgetRendererSrc = 'jupyter-js-widgets@*/dist/embed.js';
+      }
+    } catch(e) {}
+
+    jupyterWidgetsScript.src = widgetRendererSrc;
+
+    document.body.appendChild(requireJsScript);
+    document.body.appendChild(jupyterWidgetsScript);
+  }
+
+  document.addEventListener('DOMContentLoaded', addWidgetsRenderer);
+}());
+</script>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
+<span class="c1"># Edit these parameters to try different loss</span>
+<span class="c1"># measurements. Rerun this cell when done</span>
+<span class="c1"># Your Y will be calculated as Y=wX+b, so</span>
+<span class="c1"># if w=3, and b=-1, then Y=3x-1</span>
+
+<span class="n">w</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="n">myY</span> <span class="o">=</span> <span class="p">[]</span>
 
 
+<span class="k">for</span> <span class="n">thisX</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+  <span class="n">thisY</span> <span class="o">=</span> <span class="p">(</span><span class="n">w</span><span class="o">*</span><span class="n">thisX</span><span class="p">)</span><span class="o">+</span><span class="n">b</span>
+  <span class="n">myY</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">thisY</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Real Y is &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;My Y is   &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">myY</span><span class="p">))</span>
+
+<span class="c1"># let&#39;s calculate the loss</span>
+<span class="n">total_square_error</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)):</span>
+  <span class="n">square_error</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">myY</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">**</span> <span class="mi">2</span>
+  <span class="n">total_square_error</span> <span class="o">+=</span> <span class="n">square_error</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;My loss is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">total_square_error</span><span class="p">)))</span>
+</code></pre></div>
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+<code>Real Y is [-3, -1, 1, 3, 5, 7]
+My Y is   [-4, -1, 2, 5, 8, 11]
+My loss is: 5.5677643628300215
+</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+</div>
+</div>
 
               
             </article>
@@ -395,7 +482,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Pie">
       
         
-        <a href="../Welcome_To_Colaboratory/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Welcome To Colaboratory" rel="prev">
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Anterior: Home" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -404,11 +491,26 @@
               <span class="md-footer__direction">
                 Anterior
               </span>
-              Welcome To Colaboratory
+              Home
             </div>
           </div>
         </a>
       
+      
+        
+        <a href="../Linear_Regression_with_Synthetic_Data/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Linear Regression with Synthetic Data" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              Linear Regression with Synthetic Data
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   

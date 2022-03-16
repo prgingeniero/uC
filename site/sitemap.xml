@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://prg.engineer/ExploringLoss/</loc>
+         <lastmod>2022-03-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://prg.engineer/Linear_Regression_with_Synthetic_Data/</loc>
          <lastmod>2022-03-16</lastmod>
          <changefreq>daily</changefreq>
