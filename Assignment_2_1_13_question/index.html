@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="http://prg.engineer/Mimimizing_Loss/">
+        <link rel="canonical" href="http://prg.engineer/Assignment_2_1_13_question/">
       
       <link rel="icon" href="../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
     
     
       
-        <title>Mimimizing Loss - PRG</title>
+        <title>Assignment 2 1 13 question - PRG</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gradienttape" class="md-skip">
+        <a href="#your-first-assignment" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Mimimizing Loss
+              Assignment 2 1 13 question
             
           </span>
         </div>
@@ -239,10 +239,12 @@
         
   
   
+    
+  
 
 
   <li class="md-tabs__item">
-    <a href="../Assignment_2_1_13_question/" class="md-tabs__link">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
       Assignment 2 1 13 question
     </a>
   </li>
@@ -347,12 +349,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="./" class="md-tabs__link md-tabs__link--active">
+    <a href="../Mimimizing_Loss/" class="md-tabs__link">
       Mimimizing Loss
     </a>
   </li>
@@ -461,11 +461,21 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Assignment_2_1_13_question/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Assignment 2 1 13 question
       </a>
+      
     </li>
   
 
@@ -596,59 +606,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Mimimizing Loss
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Mimimizing_Loss/" class="md-nav__link">
         Mimimizing Loss
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#train-our-model" class="md-nav__link">
-    Train our model
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#plot-our-trained-values-over-time" class="md-nav__link">
-    Plot our trained values over time
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -672,28 +634,6 @@
   
     
   
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#train-our-model" class="md-nav__link">
-    Train our model
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#plot-our-trained-values-over-time" class="md-nav__link">
-    Plot our trained values over time
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -738,20 +678,37 @@
 }());
 </script>
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="your-first-assignment">Your first assignment</h1>
+<p>In this assignment you will design your own linear regression model using TensorFlow. If you are taking the course for a certificate during the end of section test you will be asked questions about this assignment.</p>
+<p>We start by setting up the problem for you.</p>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="highlight"><pre><span></span><code><span class="c1"># First import the functions we will need</span>
-<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">absolute_import</span><span class="p">,</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">unicode_literals</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># DO NOT CHANGE THIS CELL</span>
 
-<span class="k">try</span><span class="p">:</span>
-  <span class="c1"># %tensorflow_version only exists in Colab.</span>
-  <span class="o">%</span><span class="n">tensorflow_version</span> <span class="mf">2.</span><span class="n">x</span>
-<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
-  <span class="k">pass</span>
+<span class="c1"># We first import TensorFlow and other libraries</span>
 <span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras</span> <span class="kn">import</span> <span class="n">Sequential</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras.layers</span> <span class="kn">import</span> <span class="n">Dense</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># We then set up some functions and local variables</span>
+<span class="n">predictions</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">class</span> <span class="nc">myCallback</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">Callback</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">on_epoch_end</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">epoch</span><span class="p">,</span> <span class="n">logs</span><span class="o">=</span><span class="p">{}):</span>
+    <span class="n">predictions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">xs</span><span class="p">))</span>
+<span class="n">callbacks</span> <span class="o">=</span> <span class="n">myCallback</span><span class="p">()</span>
+
+<span class="c1"># We then define the xs (inputs) and ys (outputs)</span>
+<span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">ys</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mf">3.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
 </code></pre></div>
 
 </div>
@@ -759,42 +716,24 @@
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="gradienttape">GradientTape</h1>
-<p>The Calculus is managed by a TensorFlow Gradient Tape. You can learn more about the gradient tape at https://www.tensorflow.org/api_docs/python/tf/GradientTape, and we will discuss it later in the course.</p>
+<p>Please fill out the cell below to define your model and compile it.</p>
+<p><em>A hint: your model may want to learn the average error over the dataset.</em></p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="highlight"><pre><span></span><code><span class="c1"># Define our initial guess</span>
-<span class="n">INITIAL_W</span> <span class="o">=</span> <span class="mf">10.0</span>
-<span class="n">INITIAL_B</span> <span class="o">=</span> <span class="mf">10.0</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># PLEASE COMPELTE THIS CELL</span>
 
-<span class="c1"># Define our loss function</span>
-<span class="k">def</span> <span class="nf">loss</span><span class="p">(</span><span class="n">predicted_y</span><span class="p">,</span> <span class="n">target_y</span><span class="p">):</span>
-  <span class="k">return</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_mean</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">predicted_y</span> <span class="o">-</span> <span class="n">target_y</span><span class="p">))</span>
+<span class="n">SHAPE</span> <span class="o">=</span> <span class="c1">#YOUR CODE HERE#</span>
+<span class="n">LOSS</span> <span class="o">=</span> <span class="c1">#YOUR CODE HERE#</span>
 
-<span class="c1"># Define our training procedure</span>
-<span class="k">def</span> <span class="nf">train</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">outputs</span><span class="p">,</span> <span class="n">learning_rate</span><span class="p">):</span>
-  <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">GradientTape</span><span class="p">()</span> <span class="k">as</span> <span class="n">t</span><span class="p">:</span>
-    <span class="n">current_loss</span> <span class="o">=</span> <span class="n">loss</span><span class="p">(</span><span class="n">model</span><span class="p">(</span><span class="n">inputs</span><span class="p">),</span> <span class="n">outputs</span><span class="p">)</span>
-    <span class="c1"># Here is where you differentiate the model values with respect to the loss function</span>
-    <span class="n">dw</span><span class="p">,</span> <span class="n">db</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">gradient</span><span class="p">(</span><span class="n">current_loss</span><span class="p">,</span> <span class="p">[</span><span class="n">model</span><span class="o">.</span><span class="n">w</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">b</span><span class="p">])</span>
-    <span class="c1"># And here is where you update the model values based on the learning rate chosen</span>
-    <span class="n">model</span><span class="o">.</span><span class="n">w</span><span class="o">.</span><span class="n">assign_sub</span><span class="p">(</span><span class="n">learning_rate</span> <span class="o">*</span> <span class="n">dw</span><span class="p">)</span>
-    <span class="n">model</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">assign_sub</span><span class="p">(</span><span class="n">learning_rate</span> <span class="o">*</span> <span class="n">db</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">current_loss</span>
+<span class="c1"># Define your model type</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">([</span><span class="n">Dense</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="n">SHAPE</span><span class="p">)])</span>
 
-<span class="c1"># Define our simple linear regression model</span>
-<span class="k">class</span> <span class="nc">Model</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="c1"># Initialize the weights</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">w</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">INITIAL_W</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">INITIAL_B</span><span class="p">)</span>
-
-  <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">w</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span>
+<span class="c1"># Compile your model with choice of optimizer and loss function</span>
+<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;sgd&#39;</span><span class="p">,</span> <span class="n">loss</span><span class="o">=</span><span class="n">LOSS</span><span class="p">)</span>
 </code></pre></div>
 
 </div>
@@ -802,32 +741,17 @@
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="train-our-model">Train our model</h3>
+<p>We then include the call to fit your model to the data.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="highlight"><pre><span></span><code><span class="c1"># Define our input data and learning rate</span>
-<span class="n">xs</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">]</span>
-<span class="n">ys</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">3.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">]</span>
-<span class="n">LEARNING_RATE</span><span class="o">=</span><span class="mf">0.09</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># DO NOT CHANGE THIS CELL</span>
 
-<span class="c1"># Instantiate our model</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">()</span>
-
-<span class="c1"># Collect the history of w-values and b-values to plot later</span>
-<span class="n">list_w</span><span class="p">,</span> <span class="n">list_b</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
-<span class="n">epochs</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
-<span class="n">losses</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="n">epochs</span><span class="p">:</span>
-  <span class="n">list_w</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">w</span><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>
-  <span class="n">list_b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>
-  <span class="n">current_loss</span> <span class="o">=</span> <span class="n">train</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="n">LEARNING_RATE</span><span class="p">)</span>
-  <span class="n">losses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current_loss</span><span class="p">)</span>
-  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Epoch </span><span class="si">%2d</span><span class="s1">: w=</span><span class="si">%1.2f</span><span class="s1"> b=</span><span class="si">%1.2f</span><span class="s1">, loss=</span><span class="si">%2.5f</span><span class="s1">&#39;</span> <span class="o">%</span>
-        <span class="p">(</span><span class="n">epoch</span><span class="p">,</span> <span class="n">list_w</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">list_b</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">current_loss</span><span class="p">))</span>
+<span class="c1"># We then fit the model</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">callbacks</span><span class="p">],</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 
 </div>
@@ -835,19 +759,18 @@
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="plot-our-trained-values-over-time">Plot our trained values over time</h3>
+<p>We then plot the resulting prediction at EPOCH_NUMBERS = 1,25,50,150,300. If you'd like to see other Epochs simply update the EPOCH_NUMBERS variable and re-run the cell!</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="highlight"><pre><span></span><code><span class="c1"># Plot the w-values and b-values for each training Epoch against the true values</span>
-<span class="n">TRUE_w</span> <span class="o">=</span> <span class="mf">2.0</span>
-<span class="n">TRUE_b</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epochs</span><span class="p">,</span> <span class="n">list_w</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">epochs</span><span class="p">,</span> <span class="n">list_b</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">TRUE_w</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">epochs</span><span class="p">),</span> <span class="s1">&#39;r--&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">TRUE_b</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">epochs</span><span class="p">),</span> <span class="s1">&#39;b--&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;True w&#39;</span><span class="p">,</span> <span class="s1">&#39;True b&#39;</span><span class="p">])</span>
+<div class="highlight"><pre><span></span><code><span class="n">EPOCH_NUMBERS</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">150</span><span class="p">,</span><span class="mi">300</span><span class="p">]</span> <span class="c1"># Update me to see other Epochs</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span><span class="n">ys</span><span class="p">,</span><span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Ys&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">EPOCH</span> <span class="ow">in</span> <span class="n">EPOCH_NUMBERS</span><span class="p">:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span><span class="n">predictions</span><span class="p">[</span><span class="n">EPOCH</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Epoch = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">EPOCH</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 
@@ -866,7 +789,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Pie">
       
         
-        <a href="../Linear_Regression_with_Synthetic_Data/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Linear Regression with Synthetic Data" rel="prev">
+        <a href="../2_4_6_HorseOrHumanWithAugmentation/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 2 4 6 HorseOrHumanWithAugmentation" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -875,11 +798,26 @@
               <span class="md-footer__direction">
                 Anterior
               </span>
-              Linear Regression with Synthetic Data
+              2 4 6 HorseOrHumanWithAugmentation
             </div>
           </div>
         </a>
       
+      
+        
+        <a href="../ExploringLoss/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: ExploringLoss" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              ExploringLoss
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   

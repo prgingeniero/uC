@@ -6,12 +6,57 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://prg.engineer/2_2_12_Exercise/</loc>
+         <lastmod>2022-03-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://prg.engineer/2_4_3_HorsesOrHumans/</loc>
+         <lastmod>2022-03-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://prg.engineer/2_4_6_HorseOrHumanWithAugmentation/</loc>
+         <lastmod>2022-03-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://prg.engineer/Assignment_2_1_13_question/</loc>
+         <lastmod>2022-03-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://prg.engineer/ExploringLoss/</loc>
          <lastmod>2022-03-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://prg.engineer/Exploring_Categorical/</loc>
+         <lastmod>2022-03-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://prg.engineer/Exploring_Convolutions/</loc>
+         <lastmod>2022-03-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://prg.engineer/Fashion_MNIST_Convolutions%281%29/</loc>
+         <lastmod>2022-03-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://prg.engineer/Fashion_MNIST_Convolutions/</loc>
+         <lastmod>2022-03-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://prg.engineer/FirstNeuralNetwork/</loc>
+         <lastmod>2022-03-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://prg.engineer/FirstNeuralNetwork_revisited/</loc>
          <lastmod>2022-03-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -22,11 +67,6 @@
     </url>
     <url>
          <loc>http://prg.engineer/Mimimizing_Loss/</loc>
-         <lastmod>2022-03-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>http://prg.engineer/Welcome_To_Colaboratory/</loc>
          <lastmod>2022-03-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
