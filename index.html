@@ -208,6 +208,18 @@
 
 
   <li class="md-tabs__item">
+    <a href="ExploringLoss/" class="md-tabs__link">
+      ExploringLoss
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
     <a href="Linear_Regression_with_Synthetic_Data/" class="md-tabs__link">
       Linear Regression with Synthetic Data
     </a>
@@ -308,6 +320,21 @@
   
   
     <li class="md-nav__item">
+      <a href="ExploringLoss/" class="md-nav__link">
+        ExploringLoss
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="Linear_Regression_with_Synthetic_Data/" class="md-nav__link">
         Linear Regression with Synthetic Data
       </a>
@@ -385,6 +412,51 @@ https://learning.edx.org/course/course-v1:HarvardX+TinyML1+3T2020/home</p>
 <h1 id="fundamentals-of-tinyml">Fundamentals of TinyML</h1>
 <p>As mentioned earlier, we’ll be using the Colab environment for much of our programming in this specialization.  In order to ensure that everyone has some hands on experience with  Colab, please follow the link below to Google’s Introductory Colab. In  it they provide a handful of quick tips and hands on exercises to get  you started using the Colab environment.</p>
 <p>https://colab.research.google.com/notebooks/intro.ipynb</p>
+<p>For machine learning in this course we are going to use Google’s TensorFlow Machine Learning framework. TensorFlow is widely used across industry and academia. To get you started with TensorFlow here is Google’s wonderful intro to TensorFlow video.</p>
+<h1 id="sample-tensorflow-code">Sample TensorFlow code</h1>
+<p>While TensorFlow is written with fast custom C++ code under the hood, it has a high level Python interface that we will use throughout this course. As such, you’ll need to be comfortable with basic coding in Python for this course.</p>
+<p>For example we might create a custom Neural Network model using code that looks something like the below. Don’t worry if you don’t know what all of the words mean, we’ll walk you through all of these topics later in the course. For now just make sure you know enough Python to understand the following high level takeaways:</p>
+<pre><code>This is a custom class that extends the tf.keras.Model base class
+It defines four specific kinds of tf.keras.layers
+It has a call function which will run an input through those layers (functions)
+</code></pre>
+<p>If that resonates with you then you probably know enough Python to do well in this course!</p>
+<p>If you don’t feel like you know enough Python yet, don’t worry. Both Python.org and LearnPython.org have great resources you can use to get you up to speed. We’re sure that with a little work, very soon you’ll be ready to proceed with this course.</p>
+<h1 id="load-in-the-tensorflow-library">Load in the TensorFlow library</h1>
+<p>import tensorflow as tf</p>
+<h1 id="define-my-custom-neural-network-model">Define my custom Neural Network model</h1>
+<p>class MyModel(tf.keras.Model):</p>
+<pre><code>def __init__(self):
+
+    super(MyModel, self).__init__()
+
+    # define Neural Network layer types
+
+    self.conv = tf.keras.layers.Conv2D(32, 3, activation='relu')
+
+    self.flatten = tf.keras.layers.Flatten()
+
+    self.dense1 = tf.keras.layers.Dense(128, activation='relu')
+
+    self.dense2 = tf.keras.layers.Dense(10)
+</code></pre>
+<p>run my Neural Network model by evaluating</p>
+<pre><code># each layer on my input data
+
+def call(self, x):
+
+    x = self.conv(x)
+
+    x = self.flatten(x)
+
+    x = self.dense1(x)
+
+    x = self.dense2(x)
+
+    return x
+</code></pre>
+<h1 id="create-an-instance-of-the-model">Create an instance of the model</h1>
+<p>model = MyModel()</p>
 
               
             </article>
@@ -399,13 +471,13 @@ https://learning.edx.org/course/course-v1:HarvardX+TinyML1+3T2020/home</p>
       
       
         
-        <a href="Linear_Regression_with_Synthetic_Data/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Linear Regression with Synthetic Data" rel="next">
+        <a href="ExploringLoss/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: ExploringLoss" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Siguiente
               </span>
-              Linear Regression with Synthetic Data
+              ExploringLoss
             </div>
           </div>
           <div class="md-footer__button md-icon">
